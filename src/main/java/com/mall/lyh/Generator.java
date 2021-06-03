@@ -1,18 +1,21 @@
-package com.mall.lyh.mbg;
+package com.mall.lyh;
 
+import lombok.extern.slf4j.Slf4j;
 import org.mybatis.generator.api.MyBatisGenerator;
 import org.mybatis.generator.config.Configuration;
 import org.mybatis.generator.config.xml.ConfigurationParser;
+import org.mybatis.generator.exception.InvalidConfigurationException;
+import org.mybatis.generator.exception.XMLParserException;
 import org.mybatis.generator.internal.DefaultShellCallback;
 
+import java.io.File;
+import java.io.IOException;
 import java.io.InputStream;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * 用于生产MBG的代码
- * Created by macro on 2018/4/26.
- */
+@Slf4j
 public class Generator {
     public static void main(String[] args) throws Exception {
         //MBG 执行过程中的警告信息
